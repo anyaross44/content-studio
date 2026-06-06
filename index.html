@@ -951,7 +951,7 @@ async function generateContent() {
   const prompt = templates[selectedTemplate].prompt(topic, details, tone);
 
   try {
-    const res = await fetch('/api/generate', {
+    const res = await fetch('/api/claude', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
